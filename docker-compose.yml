@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  api-comments-webapi:
+    build:
+      context: .  # Indica la ruta al Dockerfile, que está en la misma ruta
+    container_name: api-comments-webapi
+    restart: always
+    ports:
+      - "8900:8080"
+    env_file:
+      - .env  # Carga las variables de entorno desde el archivo .env
